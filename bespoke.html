@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>私人定制 · 栖迟 SOJOURN</title>
+    <meta name="description" content="从一次对话开始，为你设计独一无二的旅程——也包括那些买不到的门票，与不对外开放的门。" />
+    <meta name="theme-color" content="#16281F" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=5a" />
+    <meta property="og:title" content="私人定制 · 栖迟 SOJOURN" />
+    <meta property="og:description" content="从一次对话开始，为你设计独一无二的旅程——也包括那些买不到的门票，与不对外开放的门。" />
+    <meta property="og:image" content="https://alzj96.github.io/sojourn/assets/video/hero-poster.jpg" />
+    <link rel="preload" href="./assets/fonts/cormorant-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/cormorant-400i.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      ;(function () {
+        var d = document.documentElement
+        d.classList.remove('no-js')
+        d.classList.add('js')
+        try {
+          if (sessionStorage.getItem('sj:cx')) {
+            d.classList.add('is-cx')
+            sessionStorage.removeItem('sj:cx')
+          }
+        } catch (e) {}
+      })()
+    </script>
+    <style>
+      /* 幕帘覆盖态必须在任何外部 CSS 之前生效，防止首帧闪露 */
+      .no-js .curtain { display: none; }
+      .js .curtain { position: fixed; inset: 0; z-index: 1000; background: #16281f; }
+    </style>
+    <script type="module" crossorigin src="./assets/shared-C2vhhfa-.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/shared-BEXsBbXE.css">
+  </head>
+  <body class="page-bespoke">
+    <div class="curtain" id="curtain" aria-hidden="true">
+      <div class="curtain__brand">
+        <svg class="brand-mark curtain__mark" viewBox="30 46 268 142" fill="currentColor" aria-hidden="true" focusable="false">
+          <!-- 山海徽记（设计稿 5a · 手绘笔意）：上为山棱，下为海波 -->
+          <path d="M34,104 C86,74 138,52 182,54 C224,56 268,78 292,98 C270,86 226,66 182,64 C140,66 92,86 40,110 Z"/>
+          <path d="M46,140 C110,128 150,150 210,138 C250,131 280,140 296,146 C280,150 250,142 210,150 C150,162 110,140 46,150 Z"/>
+          <path d="M70,168 C130,160 180,176 250,166 C230,172 180,184 130,176 C110,173 90,175 70,176 Z"/>
+        </svg>
+        <span class="curtain__zh">栖&#8202;迟</span>
+        <span class="curtain__rule" aria-hidden="true"></span>
+        <span class="curtain__en">SOJOURN</span>
+      </div>
+    </div>
+    <header class="site-head" id="siteHead">
+      <button class="site-head__menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu">
+        <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+        <span class="site-head__menu-label">菜单</span>
+      </button>
+    
+      <a class="site-head__brand" href="index.html" aria-label="栖迟 SOJOURN — 回到首页">
+        <svg class="brand-mark site-head__mark" viewBox="30 46 268 142" fill="currentColor" aria-hidden="true" focusable="false">
+          <!-- 山海徽记（设计稿 5a · 手绘笔意）：上为山棱，下为海波 -->
+          <path d="M34,104 C86,74 138,52 182,54 C224,56 268,78 292,98 C270,86 226,66 182,64 C140,66 92,86 40,110 Z"/>
+          <path d="M46,140 C110,128 150,150 210,138 C250,131 280,140 296,146 C280,150 250,142 210,150 C150,162 110,140 46,150 Z"/>
+          <path d="M70,168 C130,160 180,176 250,166 C230,172 180,184 130,176 C110,173 90,175 70,176 Z"/>
+        </svg>
+        <span class="site-head__brand-zh">栖&#8202;迟</span>
+        <span class="site-head__brand-en">SOJOURN</span>
+      </a>
+    
+      <nav class="site-head__right" aria-label="快捷入口">
+        <a class="site-head__link" href="gallery.html" data-i18n="nav.gallery">影像集</a>
+        <button class="site-head__lang" data-lang-toggle type="button" aria-label="切换语言 / Switch language">EN</button>
+        <a class="btn-pill site-head__cta" href="inquire.html" data-inquiry-open data-i18n="nav.inquire">预约咨询</a>
+      </nav>
+    </header>
+    
+    <div class="site-menu" id="siteMenu" aria-hidden="true">
+      <div class="site-menu__inner">
+        <nav class="site-menu__nav" aria-label="站内导航">
+          <a class="site-menu__item" href="index.html"><em>01</em><span data-i18n="menu.home">首页</span><small>Home</small></a>
+          <a class="site-menu__item" href="destinations.html"><em>02</em><span data-i18n="menu.destinations">目的地</span><small>Destinations</small></a>
+          <a class="site-menu__item" href="journeys.html"><em>03</em><span data-i18n="menu.journeys">精选行程</span><small>Signature Journeys</small></a>
+          <a class="site-menu__item" href="bespoke.html"><em>04</em><span data-i18n="menu.bespoke">私人定制</span><small>Bespoke</small></a>
+          <a class="site-menu__item" href="gallery.html"><em>05</em><span data-i18n="menu.gallery">影像集</span><small>Gallery</small></a>
+          <a class="site-menu__item" href="journal.html"><em>06</em><span data-i18n="menu.journal">旅行手记</span><small>Journal</small></a>
+          <a class="site-menu__item" href="about.html"><em>07</em><span data-i18n="menu.about">品牌</span><small>Maison</small></a>
+        </nav>
+        <div class="site-menu__aside">
+          <p class="site-menu__ethos" data-i18n="menu.ethos">把世界慢下来<span>Where the world slows down</span></p>
+          <div class="site-menu__contact">
+            <a class="site-menu__inquire" href="inquire.html" data-i18n="menu.conversation">开始一段对话</a>
+            <p class="selectable">concierge@sojourn.travel<br /><span data-i18n="wechat">微信 · SOJOURN2026</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="inquiry-overlay" id="inquiryOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="预约咨询">
+      <div class="inquiry-overlay__scrim" data-inquiry-close></div>
+      <aside class="inquiry-overlay__panel">
+        <button class="inquiry-overlay__close" type="button" data-inquiry-close aria-label="关闭">
+          <span></span><span></span>
+        </button>
+        <div class="inquiry-overlay__head">
+          <p class="eyebrow eyebrow--gold">Begin a Conversation</p>
+          <h2 class="inquiry-overlay__title" data-i18n="menu.conversation">开始一段对话</h2>
+          <p class="inquiry-overlay__sub" data-i18n="ov.sub">没有表单感的表单——想到哪里，写到哪里。</p>
+        </div>
+        <form class="inquiry-form" novalidate autocomplete="on" data-inquiry-form>
+          <div class="inquiry-form__row">
+            <div class="field">
+              <label for="ov-name" data-i18n="fm.name">怎么称呼你 <i>*</i></label>
+              <input id="ov-name" name="name" type="text" required placeholder="你的称呼" data-i18n-ph="fm.name.ph" />
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="ov-email" data-i18n="fm.email">邮箱 <i>*</i></label>
+              <input id="ov-email" name="email" type="email" required placeholder="you@example.com" />
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+          </div>
+        
+          <div class="inquiry-form__row">
+            <div class="field">
+              <label for="ov-wechat" data-i18n="fm.wechat">微信（可选）</label>
+              <input id="ov-wechat" name="wechat" type="text" placeholder="便于更快联系到你" data-i18n-ph="fm.wechat.ph" />
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="ov-destination" data-i18n="fm.dest">心仪的目的地</label>
+              <select id="ov-destination" name="destination">
+                <option value="" data-i18n="fm.d0">还未确定，愿意听建议</option>
+                <option value="east-africa" data-i18n="fm.d1">东非草原 · 肯尼亚与坦桑尼亚</option>
+                <option value="antarctica" data-i18n="fm.d2">南极</option>
+                <option value="nordic" data-i18n="fm.d3">北欧极光 · 挪威与冰岛</option>
+                <option value="indian-ocean" data-i18n="fm.d4">印度洋海岛</option>
+                <option value="kyoto" data-i18n="fm.d5">日本 · 京都</option>
+                <option value="bhutan" data-i18n="fm.d6">不丹</option>
+              </select>
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+          </div>
+        
+          <div class="inquiry-form__row">
+            <div class="field">
+              <label for="ov-dates" data-i18n="fm.dates">大致出行时间</label>
+              <input id="ov-dates" name="dates" type="text" placeholder="例如：2026 年 10 月前后，10 天左右" data-i18n-ph="fm.dates.ph" />
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="ov-party" data-i18n="fm.party">同行人数</label>
+              <select id="ov-party" name="party_size">
+                <option value="2" data-i18n="fm.p1">两人同行</option>
+                <option value="3-5" data-i18n="fm.p2">三至五人</option>
+                <option value="6-9" data-i18n="fm.p3">六至九人</option>
+                <option value="10+" data-i18n="fm.p4">十人以上 · 家族或挚友</option>
+              </select>
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+          </div>
+        
+          <div class="field">
+            <label for="ov-budget" data-i18n="fm.budget">人均旅行预算</label>
+            <select id="ov-budget" name="budget">
+              <option value="" data-i18n="fm.b0">暂不确定</option>
+              <option value="50-80k" data-i18n="fm.b1">五万至八万</option>
+              <option value="80-150k" data-i18n="fm.b2">八万至十五万</option>
+              <option value="150k+" data-i18n="fm.b3">十五万以上</option>
+            </select>
+            <p class="field__error" aria-live="polite"></p>
+          </div>
+        
+          <div class="field">
+            <label for="ov-message" data-i18n="fm.msg">你想象中的旅程</label>
+            <textarea id="ov-message" name="message" rows="4" placeholder="节奏、光线、想带上的人，或一直放在心里的某个地方——都可以告诉我们" data-i18n-ph="fm.msg.ph"></textarea>
+            <p class="field__error" aria-live="polite"></p>
+          </div>
+        
+          <input class="hp-field" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="hidden" name="ts" value="" />
+        
+          <div class="inquiry-form__actions">
+            <button class="btn-pill btn-pill--solid" type="submit">
+              <span class="btn-pill__label" data-i18n="fm.send">发送咨询</span>
+              <span class="btn-pill__spinner" aria-hidden="true"></span>
+            </button>
+            <p class="inquiry-form__promise" data-i18n="fm.promise">四十八小时内，你会收到旅行设计师的亲笔回复</p>
+          </div>
+        </form>
+        
+        <div class="inquiry-success" data-inquiry-success hidden>
+          <svg class="inquiry-success__mark" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="none" />
+            <path d="M20 33.5 28.5 42 44 24" fill="none" />
+          </svg>
+          <p class="eyebrow eyebrow--gold">Thank You</p>
+          <h3 class="inquiry-success__title" data-i18n="fm.s.h">对话已经开始</h3>
+          <p class="inquiry-success__text" data-i18n="fm.s.t">
+            我们已收到你的想法。四十八小时内，<br />一位旅行设计师会以邮件与你联系。
+          </p>
+          <a class="link-line" href="index.html" data-i18n="fm.s.back">回到首页</a>
+        </div>
+      </aside>
+    </div>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main>
+          <section class="page-head page-head--tall" data-dark-head>
+            <div class="page-head__media">
+              <img
+                src="./assets/img/bespoke-banner-1280.webp"
+                srcset="assets/img/bespoke-banner-1280.webp 1280w, assets/img/bespoke-banner-1920.webp 1920w"
+                sizes="100vw"
+                alt="无边泳池映着草原落日"
+                fetchpriority="high"
+              />
+            </div>
+            <div class="page-head__body">
+              <p class="eyebrow eyebrow--light">Bespoke</p>
+              <h1 class="page-head__title" data-i18n="menu.bespoke">私人定制</h1>
+              <p class="page-head__en"><em>A journey with no template</em></p>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="container section-head">
+              <p class="eyebrow eyebrow--gold" data-animate="fade-up">The Idea</p>
+              <h2 data-split="lines" data-i18n="bs.idea.h">从第一通电话到你走出家门<br />中间隔着七十多个安静的决定</h2>
+              <p class="lede" data-animate="fade-up" data-i18n="bs.idea.t">
+                定制不是在套餐上做加法，而是从一张白纸开始做减法。我们先聊清楚一件事：你想从日常里带走什么，又想带回什么——然后才谈目的地。
+              </p>
+            </div>
+          </section>
+
+          <section class="section" style="padding-top: 0">
+            <div class="container editorial editorial--flip">
+              <figure class="frame frame--wide frame--px" data-animate="mask-reveal">
+                <img
+                  src="./assets/img/bespoke-a-1600.webp"
+                  alt="黄昏的湖边，管家在长桌旁点起风灯"
+                  loading="lazy" decoding="async"
+                  data-speed="0.94"
+                />
+              </figure>
+              <div class="editorial__text">
+                <p class="eyebrow eyebrow--gold" data-animate="fade-up">For Whom</p>
+                <h2 data-split="lines" data-i18n="bs.who.h">为谁而做</h2>
+                <div class="para" data-animate="fade-up">
+                  <p data-i18n="bs.who.p1">为三代同行的家庭——祖父母有自己的节奏，孩子有自己的世界，而你们终于可以只是坐着。</p>
+                  <p data-i18n="bs.who.p2">为一场纪念——十周年、六十岁、某个终于痊愈的春天。有些日子值得一个配得上它的地方。</p>
+                  <p data-i18n="bs.who.p3">为一次长长的喘息——离开日程表三十天，让世界的尺度把一切重新排序。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 稀有通行：买不到的门票与不对外开放的门 -->
+          <section class="section rare" style="padding-top: 0">
+            <div class="container">
+              <header class="split-head">
+                <div>
+                  <p class="eyebrow eyebrow--gold" data-animate="fade-up">Rare Access</p>
+                  <h2 data-split="lines" data-i18n="bs.rare.h">有些门<br />只为极少数人打开</h2>
+                </div>
+                <p class="split-head__note" data-animate="fade-up" data-i18n="bs.rare.note">
+                  定制的另一半，是抵达「买不到」的地方。十年里我们结识了那些握着钥匙的人——车队、组委会、策展人与私人藏家。你只需要说出心愿。
+                </p>
+              </header>
+              <div class="jcards">
+                <div class="card">
+                  <figure class="frame frame--card" data-animate="mask-reveal">
+                    <img src="./assets/img/bespoke-f1-800.webp" alt="灯光下疾驰而过的方程式赛车" loading="lazy" decoding="async" />
+                  </figure>
+                  <div class="card__meta">
+                    <p class="card__index">01</p>
+                    <h3 class="card__title" data-i18n="bs.r1t">围场里的周日</h3>
+                    <p class="card__en">The Paddock</p>
+                    <p class="card__line" data-i18n="bs.r1x">
+                      大奖赛周末，一票难求的围场通行。发车前十分钟，你站在维修墙后，听引擎把空气点燃；赛后，这座城市的晚宴才刚刚开始。
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <figure class="frame frame--card" data-animate="mask-reveal">
+                    <img src="./assets/img/bespoke-final-800.webp" alt="黄昏满场的球场，从前排座位望向草皮的视角" loading="lazy" decoding="async" />
+                  </figure>
+                  <div class="card__meta">
+                    <p class="card__index">02</p>
+                    <h3 class="card__title" data-i18n="bs.r2t">决赛之夜</h3>
+                    <p class="card__en">The Final Whistle</p>
+                    <p class="card__line" data-i18n="bs.r2x">
+                      今年七月二十日，纽约。阿根廷对西班牙——全世界都想要的两个座位。终场哨响起时，你离草皮只有九排；之后的一整周，这座城市按你的节奏继续。
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <figure class="frame frame--card" data-animate="mask-reveal">
+                    <img src="./assets/img/bespoke-louvre-800.webp" alt="闭馆后空无一人的宫殿长廊，暖灯下挂满名画" loading="lazy" decoding="async" />
+                  </figure>
+                  <div class="card__meta">
+                    <p class="card__index">03</p>
+                    <h3 class="card__title" data-i18n="bs.r3t">闭馆后的卢浮宫</h3>
+                    <p class="card__en">The Louvre, After Hours</p>
+                    <p class="card__line" data-i18n="bs.r3x">
+                      观众散尽，长廊尽头只有策展人在等你。名画面前，只剩你们的脚步声，和守夜的灯。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p class="rare__note" data-animate="fade-up" data-i18n="bs.rare.end">这些只是发生过的例子。下一扇门，由你来命题。</p>
+            </div>
+          </section>
+
+          <section class="section" style="padding-top: 0">
+            <div class="container">
+              <div class="section-head" style="margin-bottom: clamp(2.5rem, 5vw, 4rem)">
+                <p class="eyebrow eyebrow--gold" data-animate="fade-up">The Process</p>
+                <h2 data-split="lines" data-i18n="bs.pr.h">四步，慢慢来</h2>
+              </div>
+              <div class="steps" data-stagger="0.12">
+                <div class="step">
+                  <p class="step__no">Ⅰ · Listen</p>
+                  <h3 class="step__title" data-i18n="w1t">聆听</h3>
+                  <p class="step__text" data-i18n="bs.p1x">一小时的长谈，没有任何推销。我们会问很多问题，其中一半与旅行无关。</p>
+                </div>
+                <div class="step">
+                  <p class="step__no">Ⅱ · Compose</p>
+                  <h3 class="step__title" data-i18n="w2t">编排</h3>
+                  <p class="step__text" data-i18n="bs.p2x">两周后你会收到第一版行程——薄薄几页，像一封信。然后我们一起删、一起换，直到它完全像你。</p>
+                </div>
+                <div class="step">
+                  <p class="step__no">Ⅲ · Accompany</p>
+                  <h3 class="step__title" data-i18n="w3t">随行</h3>
+                  <p class="step__text" data-i18n="bs.p3x">出发之后，一位随行管家（或一条随时在线的专属通道）替你处理一切计划外。</p>
+                </div>
+                <div class="step">
+                  <p class="step__no">Ⅳ · Echo</p>
+                  <h3 class="step__title" data-i18n="w4t">回响</h3>
+                  <p class="step__text" data-i18n="bs.p4x">归来两周后的复盘长谈与装帧影像册。很多下一段旅程，都是在这次谈话里发芽的。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section manifesto">
+            <div class="container section-head">
+              <p class="eyebrow eyebrow--gold" data-animate="fade-up">A Note</p>
+              <h2 data-split="lines" data-i18n="bs.n.h">我们每年只接二十四组定制</h2>
+              <p class="lede" data-animate="fade-up" data-i18n="bs.n.t">
+                不是姿态，是数学：每一组定制平均要占用一位设计师六十个小时。想把事情做对，就只能少做。
+              </p>
+              <div data-animate="fade-up" data-delay="0.15">
+                <a class="btn-pill btn-pill--light" href="inquire.html" data-inquiry-open data-i18n="nav.inquire">预约咨询</a>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="site-foot">
+          <div class="site-foot__cta">
+            <p class="eyebrow eyebrow--gold" data-animate="fade-up">Begin a Conversation</p>
+            <h2 class="site-foot__title" data-split="lines" data-i18n="f.cta.h">旅程，从一次<br />安静的对话开始</h2>
+            <div data-animate="fade-up" data-delay="0.15">
+              <a class="btn-pill btn-pill--light" href="inquire.html" data-i18n="nav.inquire">预约咨询</a>
+            </div>
+          </div>
+        
+          <div class="site-foot__grid">
+            <div class="site-foot__brand">
+              <svg class="brand-mark site-foot__mark" viewBox="30 46 268 142" fill="currentColor" aria-hidden="true" focusable="false">
+                <!-- 山海徽记（设计稿 5a · 手绘笔意）：上为山棱，下为海波 -->
+                <path d="M34,104 C86,74 138,52 182,54 C224,56 268,78 292,98 C270,86 226,66 182,64 C140,66 92,86 40,110 Z"/>
+                <path d="M46,140 C110,128 150,150 210,138 C250,131 280,140 296,146 C280,150 250,142 210,150 C150,162 110,140 46,150 Z"/>
+                <path d="M70,168 C130,160 180,176 250,166 C230,172 180,184 130,176 C110,173 90,175 70,176 Z"/>
+              </svg>
+              <p class="site-foot__brand-zh">栖&#8202;迟</p>
+              <p class="site-foot__brand-en">SOJOURN</p>
+              <p class="site-foot__note" data-i18n="f.note">衡门之下，可以栖迟<br /><span>——《诗经 · 陈风》</span></p>
+            </div>
+            <nav class="site-foot__col" aria-label="探索">
+              <p class="site-foot__col-title" data-i18n="f.col.explore">探索</p>
+              <a href="destinations.html" data-i18n="menu.destinations">目的地</a>
+              <a href="journeys.html" data-i18n="menu.journeys">精选行程</a>
+              <a href="bespoke.html" data-i18n="menu.bespoke">私人定制</a>
+            </nav>
+            <nav class="site-foot__col" aria-label="品牌">
+              <p class="site-foot__col-title" data-i18n="f.col.brand">品牌</p>
+              <a href="about.html" data-i18n="f.story">品牌故事</a>
+              <a href="journal.html" data-i18n="menu.journal">旅行手记</a>
+              <a href="gallery.html" data-i18n="menu.gallery">影像集</a>
+            </nav>
+            <div class="site-foot__col">
+              <p class="site-foot__col-title" data-i18n="f.col.contact">联系</p>
+              <a href="inquire.html" data-i18n="nav.inquire">预约咨询</a>
+              <a href="mailto:concierge@sojourn.travel">concierge@sojourn.travel</a>
+              <span class="selectable" data-i18n="wechat">微信 · SOJOURN2026</span>
+            </div>
+          </div>
+        
+          <div class="site-foot__legal">
+            <span data-i18n="f.legal1">© 2026 栖迟旅行 SOJOURN</span>
+            <span data-i18n="f.legal2">演示站点 · 图片来自 Unsplash / Pexels 摄影师</span>
+          </div>
+        
+          <div class="site-foot__watermark" aria-hidden="true">SOJOURN</div>
+        </footer>
+      </div>
+    </div>
+
+  </body>
+</html>

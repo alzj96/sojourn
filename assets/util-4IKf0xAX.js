@@ -1,0 +1,1 @@
+var e=e=>`./assets/${e}`,t=(e,t=document)=>t.querySelector(e);function n(e,t=!0){let n=new URLSearchParams(location.search).get(`slug`);return e.find(e=>e.slug===n)||(t?e[0]:null)}export{n,t as r,e as t};

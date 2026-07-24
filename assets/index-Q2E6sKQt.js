@@ -1,0 +1,24 @@
+import{a as e,i as t,n,o as r,t as i}from"./shared-C2vhhfa-.js";import{r as a,t as o}from"./util-4IKf0xAX.js";import{n as s,t as c}from"./journeys.en-Bgmzdhy3.js";import{n as l,t as u}from"./destinations.en-kjT_mh45.js";import{n as d,t as f}from"./articles.en-BdsrtPJE.js";import{n as p,t as m}from"./gallery.en-DlnnbEq7.js";var h=e?c:s,g=e?u:l,_=e?f:d,v=e?m:p;a(`#homeJourneys`).innerHTML=h.map((e,t)=>`
+  <a class="card jcard" href="journey.html?slug=${e.slug}">
+    <figure class="frame frame--card"><img src="${o(`img/${e.img}-800.webp`)}" alt="${e.zh}" loading="lazy" decoding="async" /></figure>
+    <div class="card__meta">
+      <p class="card__index">${String(t+1).padStart(2,`0`)}</p>
+      <h3 class="card__title">${e.zh}</h3>
+      <p class="card__en">${e.en}</p>
+      <p class="card__specs"><span>${e.days} ${r(`天`,`days`)}</span><span>${e.group.replace(`每期 `,``)}</span></p>
+    </div>
+  </a>`).join(``),a(`#homeDest`).innerHTML=g.map(e=>`
+  <a class="dest-panel" href="destination.html?slug=${e.slug}">
+    <figure class="frame"><img src="${o(`img/${e.img}-800.webp`)}" alt="${e.zh}" loading="lazy" decoding="async" /></figure>
+    <div class="dest-panel__meta">
+      <h3 class="dest-panel__zh">${e.zh}</h3>
+      <p class="dest-panel__en">${e.en}</p>
+      <p class="dest-panel__coord">${e.coord}</p>
+    </div>
+  </a>`).join(``);var y=v.slice(0,9).map(e=>`<img src="${o(`img/${e.img}-800.webp`)}" alt="${e.zh}" loading="lazy" decoding="async" />`).join(``);a(`#homeMarquee`).innerHTML=y+y,a(`#homeJournal`).innerHTML=_.slice(0,2).map(e=>`
+  <a class="acard" href="article.html?slug=${e.slug}">
+    <figure class="frame" data-animate="mask-reveal"><img src="${o(`img/${e.img}-800.webp`)}" alt="" loading="lazy" decoding="async" /></figure>
+    <p class="acard__date">${e.date} · ${e.en}</p>
+    <h3 class="acard__title">${e.title}</h3>
+    <p class="acard__excerpt">${e.excerpt}</p>
+  </a>`).join(``);function b(){if(!i||navigator.connection?.saveData)return;let e=a(`.hero__media`);if(!e)return;let t=window.matchMedia(`(max-width: 768px)`).matches,n=document.createElement(`video`);n.muted=!0,n.loop=!0,n.playsInline=!0,n.autoplay=!0,n.preload=`auto`,n.src=o(t?`video/hero-mobile.mp4`:`video/hero.mp4`),n.setAttribute(`aria-hidden`,`true`),n.addEventListener(`canplay`,()=>{n.play().catch(()=>{}),n.animate([{opacity:0},{opacity:1}],{duration:1400,fill:`forwards`,easing:`ease-out`})},{once:!0}),e.appendChild(n)}document.readyState===`complete`?b():window.addEventListener(`load`,b,{once:!0});function x(){let e=a(`.dest-viewport`),n=a(`#homeDest`);if(!e||!n)return;let r=n.children.length,o=n.innerHTML;n.innerHTML=o+o+o;let s=0,c=()=>{s=n.children[r].offsetLeft-n.children[0].offsetLeft},l=()=>{s&&(e.scrollLeft>=s*2?e.scrollLeft-=s:e.scrollLeft<s*.5&&(e.scrollLeft+=s))};c(),e.scrollLeft=s,window.addEventListener(`resize`,()=>{c(),l()}),e.addEventListener(`scroll`,l,{passive:!0});let u=!0,d=setTimeout(()=>u=!1,2600),f=e=>{u=!0,clearTimeout(d),e&&(d=setTimeout(()=>u=!1,e))};e.addEventListener(`pointerenter`,e=>{e.pointerType===`mouse`&&f(0)}),e.addEventListener(`pointerleave`,e=>{e.pointerType===`mouse`&&f(1200)}),e.addEventListener(`wheel`,()=>f(3500),{passive:!0}),e.addEventListener(`touchstart`,()=>f(4e3),{passive:!0}),e.addEventListener(`touchend`,()=>f(3e3),{passive:!0});let p=!1,m=!1,h=0,g=0;window.matchMedia(`(hover: hover) and (pointer: fine)`).matches&&(e.classList.add(`is-grab`),e.addEventListener(`pointerdown`,t=>{t.pointerType!==`mouse`||t.button!==0||(p=!0,m=!1,h=t.clientX,g=e.scrollLeft,e.classList.add(`is-grabbing`),f(3e3))}),window.addEventListener(`pointermove`,t=>{if(!p)return;let n=t.clientX-h;Math.abs(n)>5&&(m=!0),e.scrollLeft=g-n}),window.addEventListener(`pointerup`,()=>{p=!1,e.classList.remove(`is-grabbing`)}),e.addEventListener(`click`,e=>{m&&=(e.preventDefault(),e.stopPropagation(),!1)},!0),e.addEventListener(`dragstart`,e=>e.preventDefault())),i&&t.ticker.add(()=>{u||p||document.hidden||(e.scrollLeft+=.5,l())})}x(),n(({gsap:e,ScrollTrigger:t,motionOK:n})=>{if(!n)return;e.timeline().fromTo(`.hero__media`,{scale:1.08},{scale:1,duration:2.4,ease:`expo.out`},0).fromTo(`.hero__line`,{opacity:0,y:22},{opacity:.92,y:0,duration:1.2,ease:`power3.out`},.5).fromTo(`.hero__cue`,{opacity:0},{opacity:.75,duration:.8},1),e.fromTo(`.hero__cue`,{backgroundPosition:`0 -3.4rem`},{backgroundPosition:`0 3.4rem`,duration:2.2,ease:`power1.inOut`,repeat:-1}),e.to(`.hero__media`,{yPercent:14,ease:`none`,scrollTrigger:{trigger:`.hero`,start:`top top`,end:`bottom top`,scrub:!0}});let r=a(`#homeMarquee`),i=e.to(r,{xPercent:-50,duration:56,ease:`none`,repeat:-1});r.addEventListener(`mouseenter`,()=>e.to(i,{timeScale:.25,duration:.6})),r.addEventListener(`mouseleave`,()=>e.to(i,{timeScale:1,duration:.6})),t.refresh()});
